@@ -16,6 +16,7 @@ AirplaneSchema.set('toJSON', {
       name: ret.name,
       model: ret.model,
       engine: ret.engine,
+      picture: ret.picture,
       airline: ret.airline,
       seats: ret.seats
     }
