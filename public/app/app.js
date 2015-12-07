@@ -3,7 +3,7 @@ var app = angular.module('AirplaneApp', ['AirplaneServices', 'AirplaneCtrls' ,'n
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 	.when('/',{
-		templateUrl: 'app/views/airplanes.html',
+		templateUrl: 'app/index.html',
 		controller: 'AirplaneCtrl'
 	})
 	.when('/about',{
