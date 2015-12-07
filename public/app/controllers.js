@@ -1,11 +1,13 @@
 angular.module('AirplaneCtrls', ['AirplaneServices'])
 	.controller('AirplaneCtrl', ['$scope', 'Airplane', function($scope, Airplane) {
 		$scope.airplanes = [];
+
+
 	Airplane.query(function success(data) {
 		console.log(data)
     	$scope.airplanes = data;
     	$scope.planesToShow = data;
-  	}, function error(data) {
+  			}, function error(data) {
     	console.log(data);
   	});
   	$scope.filterResults = function(term) {
@@ -33,19 +35,19 @@ angular.module('AirplaneCtrls', ['AirplaneServices'])
 	'$location',
 	'Airplane', 
 	function($scope, $location, Airplane){
-		$scope.manufacturer = '';
+		$scope.name = '';
 		$scope.model = '';
 		$scope.engine = '';
 		$scope.picture = '';
 		$scope.createPlane = function() {
 			var postData = {
-				manufacturer: $scope.manufacturer,
+				name: $scope.name,
 				model: $scope.model,
 				engine: $scope.engine,
 				picture: $scope.picture
 			};
-			var newAiprlane = new Airplane(postData);
-			newAiprlane.$save();
+			var newAirplane = new Airplane(postData);
+			newAirplane.$save();
 			$location.path('/')
 
 		}

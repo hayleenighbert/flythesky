@@ -1,17 +1,6 @@
 <div class="container">
-	<h1 class='text-center'>Planes</h1>
-		<a ng-href='/planes/new' class="btn" id='newPlane'>New Plane</a>
-
-		<div class="row">
-			<form ng-submit = 'filterResults(filterTerm)'>
-				<input type="text" ng-model = 'filterTerm' placeholder='Filter by name'>
-		</form>
-	</div>
-</div>
-<div class="well" ng-repeat='plane in planesToShow	 track by $index' >
-	<a ng-href = '/planes/{{plane._id}}'>
-		<img ng-src='{{plane.picture}}' class="img-responsive thumb" alt="Image">
-		<h1><strong>{{plane.model}}</strong> <small>{{plane.name}}</small></h1>
-		<p>engine: {{ plane.engine}}</p>	
-	</a>
+<h1>Airplanes</i></h1>
+<div class="well" ng-repeat="airplane in airplanes">
+<h2><a ng-href="/airplane/{{ airplane._id }}">{{airplane.model}}</a> - <small>{{ airplane.name }}</small></h2>
+	<img class='img-responsive' src='{{ airplane.image }}'/>
 </div>
