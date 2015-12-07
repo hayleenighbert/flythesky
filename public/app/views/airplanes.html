@@ -1,6 +1,6 @@
 <div class="container">
 <h1>Airplanes</i></h1>
 <div class="well" ng-repeat="airplane in airplanes">
-<h2><a ng-href="/airplane/{{ airplane._id }}">{{airplane.model}}</a> - <small>{{ airplane.name }}</small></h2>
+<h2><a ng-href="/airplane/{{ airplane._id }}">{{ airplane.model }}</a> - <small>{{ airplane.name }}</small></h2>
 	<img class='img-responsive' src='{{ airplane.image }}'/>
 </div>

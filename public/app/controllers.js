@@ -2,8 +2,7 @@ angular.module('AirplaneCtrls', ['AirplaneServices'])
 	.controller('AirplaneCtrl', ['$scope', 'Airplane', function($scope, Airplane) {
 		$scope.airplanes = [];
 
-
-	Airplane.query(function success(data) {
+Airplane.query(function success(data) {
 		console.log(data)
     	$scope.airplanes = data;
     	$scope.planesToShow = data;
